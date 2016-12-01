@@ -67,6 +67,7 @@ var validationArray = [
       //Player One Wins Horizontal
       if (validationArray[0].toString() === "X,X,X" || validationArray[1].toString() === "X,X,X" || validationArray[2].toString() === "X,X,X") {
         winnerText.innerText = ("Player One Wins!")
+
         gameCompleted = true;
       };
       //Player Two Wins Horizontal
@@ -81,31 +82,37 @@ var validationArray = [
       if (validationArray[0][0].toString() === "X" && validationArray[1][0].toString() === "X" && validationArray[2][0].toString() === "X") {
         winnerText.innerText = ("Player One Wins!")
         gameCompleted = true;
+        highlightIds("0-0", "1-0", "2-0");
       };
       //Player Two Wins Vertical Left
       if (validationArray[0][0].toString() === "O" && validationArray[1][0].toString() === "O" && validationArray[2][0].toString() === "O") {
         winnerText.innerText = ("Player Two Wins!")
         gameCompleted = true;
+        highlightIds("0-0", "1-0", "2-0");
       };
       //Player One Wins Vertical Middle
       if (validationArray[0][1].toString() === "X" && validationArray[1][1].toString() === "X" && validationArray[2][1].toString() === "X") {
         winnerText.innerText = ("Player One Wins!")
         gameCompleted = true;
+        highlightIds("0-1", "1-1", "2-1");
       };
       //Player Two Wins Vertical Middle
       if (validationArray[0][1].toString() === "O" && validationArray[1][1].toString() === "O" && validationArray[2][1].toString() === "O") {
         winnerText.innerText = ("Player Two Wins!")
         gameCompleted = true;
+        highlightIds("0-1", "1-1", "2-1");
       };
       //Player One Wins Vertical Right
       if (validationArray[0][2].toString() === "X" && validationArray[1][2].toString() === "X" && validationArray[2][2].toString() === "X") {
         winnerText.innerText = ("Player One Wins!")
         gameCompleted = true;
+        highlightIds("0-2", "1-2", "2-2");
       };
       //Player Two Wins Vertical Right
       if (validationArray[0][2].toString() === "O" && validationArray[1][2].toString() === "O" && validationArray[2][2].toString() === "O") {
         winnerText.innerText = ("Player Two Wins!")
         gameCompleted = true;
+        highlightIds("0-2", "1-2", "2-2");
       };
 
       // ------------------------------------------------------- //
@@ -114,38 +121,34 @@ var validationArray = [
       if (validationArray[0][0].toString() === "X" && validationArray[1][1].toString() === "X" && validationArray[2][2].toString() === "X") {
         winnerText.innerText = ("Player One Wins!")
         gameCompleted = true;
+        highlightIds("0-0", "1-1", "2-2");
       };
       //Player Two Wins Diagonal Top-Bottom
       if (validationArray[0][0].toString() === "O" && validationArray[1][1].toString() === "O" && validationArray[2][2].toString() === "O") {
         winnerText.innerText = ("Player Two Wins!")
         gameCompleted = true;
+        highlightIds("0-0", "1-1", "2-2");
       };
       //Player One Wins Diagonal Bottom-Top
       if (validationArray[2][0].toString() === "X" && validationArray[1][1].toString() === "X" && validationArray[0][2].toString() === "X") {
         winnerText.innerText = ("Player One Wins!")
         gameCompleted = true;
+        highlightIds("2-0", "1-1", "0-2");
       };
       //Player Two Wins Diagonal Bottom-Top
       if (validationArray[2][0].toString() === "O" && validationArray[1][1].toString() === "O" && validationArray[0][2].toString() === "O") {
         winnerText.innerText = ("Player Two Wins!")
         gameCompleted = true;
+        highlightIds("2-0", "1-1", "0-2");
       };
       //Test counter variable to validate draw
-      if (counter === 9) {
-        winnerText.innerText = ("This game is a Draw!")
+      if (counter === 9 && gameCompleted != true) {
+        winnerText.innerText = ("Snow Way!  It's a Draw!")
       }
     }
 };
 
-var drawValidation = function() {
-  for (var i=0, len=validationArray.length; i<len; i++) {
-      // inner loop applies to sub-arrays
-      for (var j=0, len2=validationArray[i].length; j<len2; j++) {
-          // accesses each element of each sub-array in turn
-          console.log(validationArray[i][j]);
-      }
-  }
-}
+
 
 //function that takes three arguments and packages them for use in executeTurn function
 var arrayInput = function(symbol, row, column) {
@@ -156,6 +159,13 @@ var arrayInput = function(symbol, row, column) {
 var resetGame = function() {
    location.reload()
 };
+
+function highlightIds(id1, id2, id3) {
+  var el1 = document.getElementById(id1).classList.add('win-state');
+  var el2 = document.getElementById(id2).classList.add('win-state');
+  var el3 = document.getElementById(id3).classList.add('win-state');
+};
+
 
 //Add event listener to register when grid is clicked and run executeTurn
 playerGridClick.addEventListener("click", executeTurn);
@@ -185,3 +195,13 @@ resetButton.addEventListener("click", resetGame);
 
 // var turnBtn = document.getElementById('turn');
 // turnBtn.value = (turnBtn.value == "X") ? "O" : "X";
+
+// var drawValidation = function() {
+//   for (var i=0, len=validationArray.length; i<len; i++) {
+//       // inner loop applies to sub-arrays
+//       for (var j=0, len2=validationArray[i].length; j<len2; j++) {
+//           // accesses each element of each sub-array in turn
+//           console.log(validationArray[i][j]);
+//       }
+//   }
+// }

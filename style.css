@@ -12,9 +12,6 @@ clearfix .container::before, .container::after {
 div {
   text-align: center;
 }
-#title-page {
-  color: white;
-}
 
 #winner-text {
   font-size: 20px;
@@ -25,6 +22,20 @@ div {
   padding-top: 10px;
 }
 
+.game-title {
+  font-family: 'Permanent Marker', cursive;
+}
+
+#first-title {
+  color: #d5d5ff;
+}
+#second-title {
+  color: #4646d4;
+}
+#third-title {
+  color: white;
+}
+
 button {
   align-content: center;
   height: 70px;
@@ -33,10 +44,16 @@ button {
   padding: 15px;
   border-radius: 16px;
   background-color: #6666FF;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
   color: white;
+  font-family: 'Permanent Marker', cursive;
 }
+
+.win-state {
+  background-color: white;
+}
+
 table, th, td, tr {
     border-radius: 5px;
     border: 3px solid #1f1fa3;
