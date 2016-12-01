@@ -8,27 +8,32 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<p>Tic Tac Toe Game</p>
-
-<table class= "completeGrid">
-  <tr>
-    <td id= "gridA">A</td>
-    <td id= "gridB">B</td>
-    <td id= "gridC">C</td>
-  </tr>
-  <tr>
-    <td id= "gridD">D</td>
-    <td id= "gridE">E</td>
-    <td id= "gridF">F</td>
-  </tr>
-  <tr>
-    <td id= "gridG">G</td>
-    <td id= "gridH">H</td>
-    <td id= "gridI">I</td>
-  </tr>
-</table>
-
+<div id="snow">
+  <div class = "container">
+    <p id= "title-page">Tic Tac Snow</p>
+    <div class="stitched">
+      <table id= "completeGrid" class="gridStyle">
+        <tr>
+          <td id= "0-0"></td>
+          <td id= "0-1"></td>
+          <td id= "0-2"></td>
+        </tr>
+        <tr>
+          <td id= "1-0"></td>
+          <td id= "1-1"></td>
+          <td id= "1-2"></td>
+        </tr>
+        <tr>
+          <td id= "2-0"></td>
+          <td id= "2-1"></td>
+          <td id= "2-2"></td>
+        </tr>
+      </table>
+    </div>
+    <div id= "winner-text"></div>
+    <button id= "reset-button" type="button">Try Again?</button>
+  </div>
+</div>
 <script src="/Users/thomas.snow/Documents/Personal/General Assembly/WDI/Projects/tictactoe/tictactoe.js"></script>
 </body>
 </html>
