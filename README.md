@@ -25,19 +25,19 @@ Run Every time:
 
 This was then diagramed on butcher paper.  The below image illustrates this.  
 
-!(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/programflowdiagram.jpg "Program Flow Diagram")
+(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/program%20flow%20diagram.jpg?raw=true "Program Flow Diagram")
 
 MDN documentation was used where methods were unclear or unfamiliar.  
 
 White boards were used to explain concepts by instructors to great effect.  
 
-!(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/multidimensionalarraydiagram.jpg "Multidimensional Array Diagram")
+(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/multidimensional%20array%20diagram.jpg?raw=true "Multidimensional Array Diagram")
 
 Console.log, inspector and the Debugger tool were used extensively during the coding process to test functionality and correct errors or bugs.  
 
 A coordinate table was written out as a guide to assist in the coding win validation process.  This was extremely helpful and prevented errors from appearing throughout the code.  
 
-!(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/tablecoordinatesdiagram.jpg "Table Coordinate Diagram")
+(https://github.com/tecurtain/tic-tac-toe/blob/master/readme_images/table%20coordinates%20diagram.jpg?raw=true "Table Coordinate Diagram")
 
 FUTURE EXPANSION
 (stretch goals)
