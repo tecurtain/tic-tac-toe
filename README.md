@@ -1,4 +1,5 @@
 ### README FILE
+A hosted page to this game can be found [here](https://tecurtain.github.io/tic-tac-toe/).
 
 #### TECHNOLOGIES USED </break>
 JavaScript, HTML, CSS.
